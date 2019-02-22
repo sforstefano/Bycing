@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agafar bicicleta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js"></script>
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form action="vista.php" method = "post">
+                    <p>DNI<br>
+                    <input required type="text" name="DNI" placeholder="DNI"></p>
+                    <p>Password<br>
+                    <input required type="password" name="pass" placeholder="Contrassenya"></p>
+                    <p>Parkings:<br>
+                    <?php
+                        include_once("control.php");
+                        $c = new TControl();
+                        $llista = $c->llista_parkings();
+                        echo("$llista");
+                    ?></p>
+                    <input type="hidden" name="opcio" value="agafar_bici" />
+                    <input type="submit" value="Agafa la bicicleta">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

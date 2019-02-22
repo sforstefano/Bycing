@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bycing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js"></script>
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="formulari" action="vista_control.php" method = "post">
+                    <button name="opcio" id="registre" type="submit" value="registre" class="btn btn-success">Registre</button>
+                    <br><br>
+                    <button name="opcio" id="baixa" type="submit" value="baixa-usuari" class="btn btn-danger">Donar de baixa</button>
+                    <br><br>
+                    <button name="opcio" id="agafar" type="submit" value="agafar-bici" class="btn btn-info">Agafar bicicleta</button>
+                    <br><br>
+                    <button name="opcio" id="deixar" type="submit" value="tornar-bici" class="btn btn-dark">Tornar bicicleta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

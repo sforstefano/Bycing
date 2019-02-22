@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registre usuari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="main.js"></script>
+    <script src="script/jquery-3.3.1.min.js"></script>
+    <script src="script/script.js"></script>
+    <script src="script/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="formulari" action="vista.php" method = "post">
+                    <p>DNI<br>
+                    <input type="text" placeholder="DNI" name ="DNI" size="10" maxlength="9" pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" required>
+                    <p>Nom i cognoms<br>
+                    <input required type="text" name="nom_cognom" placeholder="Nom i cognoms"></p>
+                    <p>Direcció<br>
+                    <input required type="text" name="direccio" placeholder="Direcció"></p>
+                    <p>Password<br>
+                    <input required type="password" name="pass" placeholder="Contrassenya"></p>
+                    <p>Repetir contrassenya<br>
+                    <input required type="password" name="pass2" placeholder="Repetir contrassenya"></p>
+                    <input type="hidden" name="opcio" value="registre_usuari" />
+                    <input type="submit" value="Registra't">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
